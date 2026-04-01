@@ -24,39 +24,64 @@
 
 ### 环境要求
 
-- [Claude Code](https://claude.com/code) (桌面端)
+- [Claude Code](https://claude.com/code)（桌面端）
 - Node.js 18+
 
 ### 安装方式
 
-将 `SKILL.md` 和 `references/` 目录复制到 Claude Code 的 skills 目录：
+将 `SKILL.md` 和 `references/` 目录复制到 AI 平台的 skills 目录即可使用。
 
-```markdown
-# 克隆项目
-git clone https://github.com/Hazenix/java-backend-interview-simulator.git
+### 基本使用
 
-# 或手动复制
-将 SKILL.md 和 references/ 放入 ~/.claude/skills/your-skill-name/
-```
-
-### 使用方式
-
-在 Claude Code 对话框中直接表达面试意图即可触发：
+在支持 Skills 的 AI 平台中直接表达面试意图即可触发：
 
 ```
-# 直接开始（系统会引导你选择身份和风格）
 开始一场模拟面试
-
-# 提供更多信息可跳过配置步骤
-我是应届生，想练习字节的面试，温和鼓励型风格
+我是应届生，想练习Java后端面试，温和鼓励型
 ```
 
-首次使用，系统会依次确认：
+系统会依次确认：求职者身份、面试时长、面试官风格、是否提供简历。
 
-1. **求职者身份** — 日常实习 / 暑期实习 / 校招 / 社招 1-3 年
-2. **面试时长** — 30 / 40 / 45 分钟
-3. **面试官风格** — 严厉拷打 / 温和鼓励 / 专业高效 / 深挖学术 / 工程实践 / 综合平衡
-4. **是否提供简历** — 如有可按经历定制项目深挖问题
+### 语音输入（推荐）
+
+在支持语音的平台上，可使用系统语音输入获得更好体验：
+
+| 平台 | 系统语音 | 微信 | 企业微信 | 飞书 | QQ |
+|------|---------|------|---------|------|-----|
+| QClaw | Win+H / Fn+Fn | 转文字 | — | — | — |
+| WorkBuddy | Win+H / Fn+Fn | — | 支持 | 支持 | 支持 |
+| AutoClaw | Win+H / Fn+Fn | — | — | 支持 | — |
+
+> **提示**：微信语音需长按消息选择"转文字"后再发送，直接语音消息暂不支持。
+
+### 支持平台
+
+| 平台 | 远程接入 | 安装难度 | 适合场景 |
+|------|---------|---------|---------|
+| **WorkBuddy**（推荐） | 企业微信 / QQ / 飞书 / 钉钉 | 一键安装 | 企业办公、团队练习 |
+| **AutoClaw** | 飞书 | 一键安装 | 个人 / 快速上手 |
+| **QClaw** | 微信 | 开箱即用 | 日常练习 |
+| **Claude Code** | 本地桌面 | 手动配置 | 本地深度使用 |
+
+> WorkBuddy 和 AutoClaw 完全兼容 OpenClaw Skills，可直接加载本项目无需修改。
+
+---
+
+## 进阶用法
+
+### 控制命令
+
+面试过程中可使用以下命令：
+
+- **继续** — 进入下一环节
+- **跳过** — 跳过当前问题
+- **结束** — 提前结束并生成报告
+- **换个风格** — 实时切换面试官风格
+- **反馈** — 查看当前评分
+
+### 简历支持
+
+提供简历可获得更有针对性的项目深挖问题。将简历文本直接发送给 AI 即可。
 
 ---
 
@@ -64,13 +89,12 @@ git clone https://github.com/Hazenix/java-backend-interview-simulator.git
 
 ```
 java-backend-interview-simulator/
-├── SKILL.md                        # 技能主文件（Claude Code skill 格式）
+├── SKILL.md                        # 技能主文件（OpenClaw skill 格式）
 ├── references/
 │   ├── tech-knowledge-base.md      # 技术知识库（高频面试题与答案要点）
 │   ├── evaluation-rubric.md        # 评分细则与分人群反馈模板
-│   └── interviewer-styles.md       # 六种面试官风格详解
+│   └── interviewer-styles.md        # 六种面试官风格详解
 ├── JavaGuide/                      # 题库来源（子模块，不直接影响运行时）
-├── .claude/                        # Claude Code 本地配置
 └── LICENSE
 ```
 
@@ -78,7 +102,7 @@ java-backend-interview-simulator/
 
 ## 技术架构
 
-本项目基于 **Claude Code Skill 框架**构建，采用三层加载架构：
+本项目基于 **OpenClaw Skill 框架**构建，采用三层加载架构：
 
 | 层级 | 文件 | 作用 |
 |------|------|------|
@@ -95,9 +119,7 @@ java-backend-interview-simulator/
 - **面试时长依赖估算**：实际面试中时间分配是动态的，本项目按参考时长设计，但不做精确计时
 - **不支持实时语音**：当前为文字交互，暂不涉及口语表达评估（表达能力通过文字间接评估）
 - **题库覆盖有边界**：主要覆盖 Java 后端高频方向，Rust/Go/C++ 等方向暂不涉及
-- **简历解析有限**：可读取简历文本，但暂不支持结构化简历解析（PDF/图片）
-
-如有问题或建议，欢迎提交 Issue 或 Pull Request。
+- **简历解析有限**：可读取简历文本，但暂不支持结构化简历解析（PDF/图片格式）
 
 ---
 
@@ -131,4 +153,4 @@ java-backend-interview-simulator/
 ## 致谢
 
 - [JavaGuide](https://github.com/Snailclimb/JavaGuide) — 高频面试题来源
-- [Claude Code](https://claude.com/code) — AI 能力支撑
+- [OpenClaw / Claude Code](https://claude.com/code) — AI 能力支撑
