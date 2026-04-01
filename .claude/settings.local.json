@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash ~/.claude/skills/web-access/scripts/check-deps.sh)",
+      "Bash(curl -s \"https://api.github.com/repos/Snailclimb/JavaGuide/contents\")",
+      "Bash(curl:*)"
+    ]
+  }
+}
