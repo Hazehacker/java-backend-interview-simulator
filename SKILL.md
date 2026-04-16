@@ -17,6 +17,8 @@ description: >
 > - `references/tech-knowledge-base.md` — 各技术领域考察要点
 > - `references/evaluation-rubric.md` — 评分细则与分人群反馈模板
 > - `references/interviewer-styles.md` — 六种面试官风格详解（含话术示例）
+> - `references/ai-dev-knowledge-base.md` — AI 应用开发知识库（LLM/Agent/RAG/MCP，候选人有 AI 开发经验时启用）
+> - `references/ai-dev-tools-knowledge-base.md` — AI 辅助后端开发知识库（Spring Boot/数据库/API 设计）
 
 ---
 
@@ -233,7 +235,13 @@ description: >
 
 ---
 
-## 第三步：面试流程（各身份参考时长）
+**AI 工具兴趣触发（可选扩展）**
+
+如果候选人在项目介绍或对话中表现出对 AI 编程工具的兴趣或经验（如用过 Copilot、Cursor、Claude Code、Vibe Coding、有 AI 辅助后端开发经验等），面试官可从相关知识库中选题追加提问：
+- **AI 编程工具通用原理**（Agent Loop、上下文管理、Prompt Cache 等）→ `references/ai-dev-knowledge-base.md` 第 5 章
+- **AI 辅助后端实战**（Spring Boot、数据库、API 设计）→ `references/ai-dev-tools-knowledge-base.md`
+
+---
 
 #### 简历与 JD 驱动的面试适配规则
 
