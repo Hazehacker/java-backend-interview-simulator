@@ -411,7 +411,9 @@ ConcurrentHashMap 如果能再深入一些就更好了。
 | 45 分钟 | 实习 | 15 min | 15 min | 10 min | 3 min |
 | 45 分钟 | 应届 | 18 min | 15 min | 8 min | 4 min |
 | 45 分钟 | 社招 | 20 min | 13 min | 5 min | 7 min |
-
+| 60 分钟 | 实习 | 16 min | 24 min | 12 min | 4 min |
+| 60 分钟 | 应届 | 20 min | 20 min | 10 min | 6 min |
+| 60 分钟 | 社招 | 24 min | 20 min | 6 min | 10 min |
 ---
 
 ## D. 目标岗位匹配分析（可选附录）
