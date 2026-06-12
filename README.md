@@ -32,6 +32,14 @@
 
 ## 快速开始
 
+### 方式零：在线直接用（推荐）
+
+> 由 [socialistic.ai](https://socialistic.ai) 提供的在线入口，打开即传简历/岗位JD、开始模拟，无需配置环境。
+
+**[→ 立即使用 Java 后端面试模拟器](https://socialistic.ai/zh/skill/java-backend-interview-simulator-a6d59a?utm_source=github&utm_medium=issue&utm_campaign=20260612-summer-interview-resume-skill-builders&utm_content=hyperlink&r=ee06cdb7a1c0)**
+
+---
+
 ### 选择你的运行环境
 
 本 skill 兼容 OpenClaw Skills 规范，可在多种平台运行。**推荐手机微信用户走 QClaw + 云端 OpenClaw 路线**，零配置即可开始。
